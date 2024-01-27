@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Engine</title>
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+</head>
+<body>
+	<h1>Search Engine</h1>
+	<form method="POST" action="{{ url_for('search') }}">
+		<label for="query">Enter your query:</label>
+		<input type="text" id="query" name="query" required>
+		<select id="search-engine" name="search_engine">
+			<option value="bert">BERT</option>
+			<option value="pylucene">PyLucene</option>
+		</select>
+		<button type="submit">Search</button>
+	</form>
+</body>
+</html>
